@@ -1,6 +1,15 @@
 import random
 
 def generate_password(length):
+    """
+    Génère un mot de passe aléatoire d'une longueur spécifiée.
+
+    Args:
+        length (int): La longueur du mot de passe à générer.
+
+    Returns:
+        str: Le mot de passe généré.
+    """
     characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
     password = ""
     for _ in range(length):
@@ -8,6 +17,10 @@ def generate_password(length):
     return password
 
 def main():
+    """
+    Fonction principale qui demande à l'utilisateur la longueur du mot de passe
+    et affiche le mot de passe généré.
+    """
     print("Bienvenue dans le générateur de mot de passe !")
     try:
         length = int(input("Entrez la longueur du mot de passe (minimum 8) : "))
@@ -22,8 +35,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-# def multiplication(valeur, multiplicateur):
-#     return valeur*multiplicateur
-
-# print(multiplication(2,5))
