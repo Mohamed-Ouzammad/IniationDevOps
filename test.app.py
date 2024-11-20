@@ -1,6 +1,7 @@
 import unittest
 from app import generate_password
 
+# Module docstring : Ce fichier contient les tests unitaires pour le générateur de mot de passe.
 class TestPasswordGenerator(unittest.TestCase):
     """
     Classe de test pour le générateur de mot de passe.
@@ -19,7 +20,7 @@ class TestPasswordGenerator(unittest.TestCase):
         Tester que le mot de passe ne contient que des caractères valides.
         """
         valid_characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
-        password = generate_password(15)
+        password = generate_password(15)  # Générer un mot de passe de 15 caractères
         for char in password:
             self.assertIn(char, valid_characters, f"Le caractère '{char}' n'est pas valide.")
     
