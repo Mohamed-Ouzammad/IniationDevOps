@@ -1,7 +1,5 @@
 import random
 
-# Module docstring : Décrit le but du fichier
-# Ce fichier contient un générateur de mot de passe simple.
 
 def generate_password(length):
     """
@@ -13,9 +11,7 @@ def generate_password(length):
     Returns:
         str: Le mot de passe généré.
     """
-    # Ensemble de caractères possibles
     characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
-    # Génération du mot de passe
     password = ""
     for _ in range(length):
         password += random.choice(characters)
